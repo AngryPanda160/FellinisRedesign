@@ -1,0 +1,77 @@
+.logo {
+  width: 50px;
+  margin-right: 5px;
+}
+.logo-lg {
+  width: 75px;
+}
+
+.navbar-brand {
+  font-family: Lora, Arial, Helvetica, sans-serif;
+}
+
+#background-pizza {
+  width: 100%;
+  min-height: 50vh;
+  max-height: 80vh;
+}
+
+#intro-banner {
+  overflow: hidden;
+  background-color: black;
+}
+
+#banner-text {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  margin-right: 5px;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color: #fff2e3 !important;
+}
+
+.location-container {
+  border: solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 10px;
+}
+
+.menu-col {
+  width: 600px;
+  max-width: 80vw;
+}
+
+.menu-img {
+  width: 600px;
+  max-width: 80vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: #c6c6c6 !important;
+}
+
+#hours {
+  width: 100%;
+  background-color: #121618;
+
+  color: white;
+  padding: 20px;
+}

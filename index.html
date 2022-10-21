@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Images from stock photo website and from Fellini's Pizzeria
+      Some code taken from Fellini's website and Bootstrap 5.2 docs -->
+    <title>Personas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;528;600;700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top">
+        <div class="container-fluid">
+          <div class="d-flex">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img
+                src="./assets/fellini_logo_2_circle.png"
+                class="logo"
+                alt="logo"
+              />
+              <div class="collapse navbar-collapse">Fellini's Pizzeria</div>
+            </a>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#hours">Hours</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#menu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Menu
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#pizzas">Pizzas</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#sandwiches">Sandwiches</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#salads">Salads</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#extras">Extras</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="location.href='#locations'"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                />
+              </svg>
+              Order Now
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="intro-banner">
+      <img
+        src="./assets/background-pizza.jpeg"
+        id="background-pizza"
+        alt="pizza on dark wood"
+      />
+      <div id="banner-text">
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="./assets/fellini_logo_2_circle.png"
+            class="logo-lg d-none d-md-inline mb-3"
+            alt="logo"
+          />
+          <h1 class="mb-4">Welcome to Fellini's Pizzeria</h1>
+          <h1 class="mb-5"><strong>Let's have a slice together</strong></h1>
+          <svg
+            class="d-none d-lg-inline"
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            fill="currentColor"
+            class="bi bi-arrow-down-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="locations" class="p-2 m-2 border-bottom border-dark">
+      <h1 class="display-5 mb-4 text-center">Our Locations</h1>
+
+      <div class="d-flex justify-content-evenly flex-wrap">
+        <div class="location-container mb-2">
+          <h2><em>Providence</em></h2>
+          <p class="h4">166 Wickenden St.</p>
+          <button type="button" class="btn btn-danger mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+              />
+            </svg>
+            (401) 751-6737
+          </button>
+          <p>Online ordering not yet available</p>
+        </div>
+        <div class="location-container mb-2">
+          <h2><em>Cranston</em></h2>
+          <p class="h4">2190 Broad St.</p>
+          <button type="button" class="btn btn-danger mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+              />
+            </svg>
+            (401) 467-5992
+          </button>
+          <button type="button" class="btn btn-danger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-cart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+            Order Online
+          </button>
+        </div>
+      </div>
+      <p class="h4 text-center mt-2">
+        <em>Free Delivery ($10 min), Take Out, Pick Up</em>
+      </p>
+    </div>
+    <div id="menu">
+      <h1 class="display-5 mb-xl-4 text-center">Menu</h1>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div id="pizzas" class="menu-col m-3 mt-1">
+          <h2><em>Pizzas</em></h2>
+          <img
+            class="menu-img"
+            src="./assets/Fellini_Pizza.jpeg"
+            alt="The sweet heaven pizza"
+          />
+          <p>
+            All pizzas come with a special blend of cheeses on a whole wheat New
+            York-style crust.
+          </p>
+          <h3>Create Your Own</h3>
+          <ul class="list-unstyled">
+            <li class="menu-item">
+              <div class="h5">Cheese and Tomato Sauce</div>
+              <div class="h6">$16.50</div>
+            </li>
+            <li class="menu-item">
+              <div class="h5">First Topping</div>
+              <div class="h6">$2.15</div>
+            </li>
+            <li class="menu-item">
+              <div class="h5">Each Additional Topping</div>
+              <div class="h6">$1.10</div>
+            </li>
+            <li>
+              <p>
+                <b>Toppings:</b> Mozzarella, Ricotta, Cheese, Pepperoni,
+                Meatball, Sausage, Bacon, Ham, Steak, Chicken, Salami, Pulled
+                Pork, Anchovies, Onions, Scallions, Mushrooms, Fresh Tomatoes,
+                Sun Dried Tomatoes, Artichoke Hearts, Squash, Green Peppers,
+                Black Olives, Eggplant, Roasted Red Peppers, Broccoli, Spinach,
+                Caramelized Onion, Garlic, Pineapple, Jalapeno Peppers, Arugula,
+                Feta, Goat, or Gorgonzola & Basil
+              </p>
+            </li>
+          </ul>
+          <h3>Slices</h3>
+          <ul class="list-unstyled">
+            <li class="menu-item">
+              <div class="h5">Cheese</div>
+              <div class="h6">$2.50</div>
+            </li>
+            <li class="menu-item">
+              <div class="h5">One Topping</div>
+              <div class="h6">$3.25</div>
+            </li>
+            <li class="menu-item">
+              <div class="h5">Specialty</div>
+              <div class="h6">$3.60</div>
+            </li>
+          </ul>
+          <h3>Vegetarian Specialty</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Insalatta</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">
+                Fresh spinach marinated in garlic and olive oil, mushrooms,
+                ricotta, and feta cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Go Ask Alice</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Fresh buffalo mozzarella, plum tomatoes, and basil.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Pesto</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">Pesto sauce with plum tomatoes.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Villager</div>
+                <div class="mb-0 h6">$23.50</div>
+              </div>
+              <p class="mb-2">
+                Seasoned baby arugula, goat cheese, caramelized onions, and
+                dried cranberries finished with a balsamic glaze.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Wickenden</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">
+                Fresh garlic, mushrooms, roasted red peppers, ricotta, and feta
+                cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The White Pizza</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Mozzarella, ricotta, feta cheese & fresh garlic.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Garden Vegetable</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">
+                Scallions, tomatoes, and onions topped with black pepper and
+                olive oil.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Spinachoke</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Fresh spinach, artichoke hearts & roasted red peppers, topped
+                with olive oil, salt & pepper.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Kitchen Sink</div>
+                <div class="mb-0 h6">$23.50</div>
+              </div>
+              <p class="mb-2">
+                Penne pasta, feta cheese, scallions, roasted red peppers topped
+                with pepperoni and parmesan peppercorn sauce.
+              </p>
+            </li>
+          </ul>
+          <h3>Meat Specialty</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Sweet Heaven</div>
+                <div class="mb-0 h6">$23.50</div>
+              </div>
+              <p class="mb-2">
+                Bacon, ricotta cheese & scallions with a creamy parmesan
+                peppercorn sauce.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Borden</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">
+                Crispy bacon with sweet caramelized onions & gorgonzola cheese,
+                drizzled with a creamy parmesan peppercorn sauce.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Steak & Scallions</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Shaved steak & scallions topped with a parmesan peppercorn.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The BBQ Chicken</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">Baked chicken, Bbq sauce, and red onions.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Joasburg</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Baked chicken and broccoli in a creamy parmesan peppercorn
+                sauce.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Satyricon</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Plum tomatoes, fresh basil, and Italian sausage.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The G-Unit</div>
+                <div class="mb-0 h6">$23.95</div>
+              </div>
+              <p class="mb-2">
+                Freshly sliced mushrooms with our homemade sausage stuffing.
+                Finished with shaved parmesan, scallions, and a balsamic glaze.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Chicken Pesto</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">Thin sliced baked chicken and pesto sauce.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Meat Lover's Code Blue</div>
+                <div class="mb-0 h6">$23.50</div>
+              </div>
+              <p class="mb-2">Italian sausage, bacon, and pepperoni.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Buffalo Chicken</div>
+                <div class="mb-0 h6">$24.95</div>
+              </div>
+              <p class="mb-2">
+                Chicken soaked in our own buffalo sauce and parmesan peppercorn
+                topped with a blend of secret spices & feta.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="sandwiches" class="menu-col m-3 mt-1">
+          <h2><em>Sandwiches</em></h2>
+          <img
+            class="menu-img"
+            src="./assets/fellini_italian_sandwich.jpeg"
+            alt="open face sandwich on a plate with chips"
+          />
+          <p>
+            Your choice of freshly baked Focaccia or 8” Italian roll. All
+            sandwiches are served with a side of potato chips. Upgrade to
+            chicken pasta salad or veggie pasta salad for an extra $1.
+          </p>
+          <h3>Vegetarian Sandwiches</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Veggie Special</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Fresh spinach, artichoke hearts, roasted red peppers, onions,
+                and a hint of garlic; grilled to perfection with mozzarella
+                cheese on Focaccia
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Other Stuff Sandwich</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Fresh mozzarella cheese, basil, plum tomatoes, olive oil, and
+                herbs.
+              </p>
+            </li>
+          </ul>
+          <h3>Poultry/Fish Sandwiches</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Cold Chicken Sandwich</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Baked chicken breast, lettuce, tomato, and mayo.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Turkey Sandwich</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Smoked turkey breast, lettuce, tomato, cranberry sauce, and
+                mayo.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The BBQ Chicken</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">Chicken, BBQ sauce, red onions, and cheese.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Tuna Sandwich</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">Tuna, lettuce, and tomato.</p>
+            </li>
+          </ul>
+          <h3>Meat Specialty</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Italian Grinder (h/c)</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Salami, mortadella, hot ham and provolone cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Muffuletta (h/c)</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                A Louisiana specialty! Mortadella, hot ham, genoa salami,
+                provolone cheese layered with gardenia mix of pickled
+                cauliflower, carrots, green olives, and pepperoncini.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Steak & Cheese</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Shaved sirloin, peppers, mushrooms, onions, and cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Parmigianas</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">Your choice of Meatball, Eggplant, or Chicken.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Pulled Pork</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">Pork with caramelized onions and cheese.</p>
+            </li>
+          </ul>
+          <h2 id="salads"><em>Salads</em></h2>
+          <img
+            class="menu-img"
+            src="./assets/spin-pie.jpeg"
+            alt="spinach pie on a plate with marinara"
+          />
+          <p>
+            All salads come with your choice of dressing: House Balsamic
+            Vinaigrette, Italian, Greek, Parmesan Peppercorn, Honey Mustard, or
+            Caesar
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Spinach Pie</div>
+                <div class="mb-0 h6">$7.50</div>
+              </div>
+              <p class="mb-2">
+                Fresh spinach wrapped in a whole wheat blanket with mozzarella
+                and provolone cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Deluxe Spinach Pie</div>
+                <div class="mb-0 h6">$8.95</div>
+              </div>
+              <p class="mb-2">
+                Marinated spinach with garlic, feta, mozzarella and provolone
+                cheese with pepperoni. Wrapped in a whole wheat blanket served
+                with marinara sauce.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Garden/House Salad</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Mixed greens, marinated mushrooms, tomatoes, stuffed olives,
+                onions, seasonal squash, roasted red peppers, kalamata olives,
+                banana peppers, and croutons with shaved parmesan cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The AntiPasta Salad</div>
+                <div class="mb-0 h6">$9.50</div>
+              </div>
+              <p class="mb-2">
+                Mixed greens topped with rolled mortadella, genoa salami, hot
+                ham, and provolone cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">The Caprese Salad</div>
+                <div class="mb-0 h6">$8.95</div>
+              </div>
+              <p class="mb-2">
+                Fresh mozzarella cheese, plum tomatoes, basil on a bed of mixed
+                greens with balsamic glaze and olive oil.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Classic Caesar Salad</div>
+                <div class="mb-0 h6">$8.50</div>
+              </div>
+              <p class="mb-2">
+                Romaine lettuce tossed with housemade caesar dressing, croutons,
+                and shaved parmesan cheese.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Tuna Salad</div>
+                <div class="mb-0 h6">$8.95</div>
+              </div>
+              <p class="mb-2">
+                Adds a heaping scoop of tuna to our garden salad.
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Chicken Salad</div>
+                <div class="mb-0 h6">$8.95</div>
+              </div>
+              <p class="mb-2">Adds baked chicken to our garden salad.</p>
+            </li>
+          </ul>
+        </div>
+        <div id="extras" class="menu-col m-3 mt-1">
+          <h2><em>Extras</em></h2>
+          <img
+            class="menu-img"
+            src="./assets/deli_case.jpeg"
+            alt="deli case with desserts and sides"
+          />
+          <h3>Soups/Sides</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Gary's famous Chicken Escarole soup</div>
+                <div class="mb-0 h6">$4.25</div>
+              </div>
+              <p class="mb-2">Soups available seasonally.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Soup of the day</div>
+                <div class="mb-0 h6">$4.25</div>
+              </div>
+              <p class="mb-2">Soups available seasonally.</p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="h5">Chicken/Vegetable Pasta Salad</div>
+                <div class="h6">$2.50/4.50</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="h5">Stuffed Cherry Peppers</div>
+                <div class="h6">$1.35</div>
+              </div>
+            </li>
+          </ul>
+          <h3>Desserts</h3>
+          <ul class="list-unstyled">
+            <li>
+              <div class="menu-item">
+                <div class="h5">Brownie</div>
+                <div class="h6">$3.00</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="h5">Baklava</div>
+                <div class="h6">$2.00</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="h5">Whoopie Pie</div>
+                <div class="h6">$3.50</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Tiramisu</div>
+                <div class="mb-0 h6">$4.75</div>
+              </div>
+              <p class="mb-2">
+                Ladyfingers, espresso, mascarpone, and chocolate
+              </p>
+            </li>
+            <li>
+              <div class="menu-item">
+                <div class="mb-0 h5">Cannoli</div>
+                <div class="mb-0 h6">$3.95</div>
+              </div>
+              <p class="mb-2">Italian cream-filled pastry.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="hours">
+        <h1 class="text-center">Hours and Info</h1>
+        <div class="d-flex justify-content-around flex-wrap">
+          <div class="info-panel">
+            <div class="d-flex">
+              <div class="pe-3">
+                <h2><em>Providence</em></h2>
+                <div>Phone: (401) 751-6737</div>
+                <div>166 Wickenden St,</div>
+                <div>Providence, RI 02903</div>
+              </div>
+              <ul class="list-unstyled">
+                <li>Monday: 11am-11pm</li>
+                <li>Tuesday: 11am-11pm</li>
+                <li>Wednesday: 11am-11pm</li>
+                <li>Thursday: 11am-12am</li>
+                <li>Friday: 11am-2am</li>
+                <li>Saturday: 11am-2am</li>
+                <li>Sunday: 11am-11pm</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-panel">
+            <div class="d-flex">
+              <div class="pe-3">
+                <h2><em>Cranston</em></h2>
+                <div>Phone: (401) 467-5992</div>
+                <div>2190 Broad Street,</div>
+                <div>Cranston, RI 02803</div>
+              </div>
+              <ul class="list-unstyled">
+                <li>Monday: Closed</li>
+                <li>Tuesday: 4pm-9pm</li>
+                <li>Wednesday: 11am-9pm</li>
+                <li>Thursday: 11am-9pm</li>
+                <li>Friday: 11am-9pm</li>
+                <li>Saturday: 11am-9pm</li>
+                <li>Sunday: 11am-9pm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
